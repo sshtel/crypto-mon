@@ -1,1 +1,1 @@
-# crypto-mon
+# prometheus-mongo-example

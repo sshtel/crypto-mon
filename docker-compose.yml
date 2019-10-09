@@ -1,0 +1,97 @@
+version: '3'
+services:
+  prometheus:
+    # image: 'prom/prometheus'
+    image: 'prom-test'
+    env_file: local.env
+    ports:
+      - 9090:9090
+    cap_add: [ 'NET_ADMIN', 'NET_RAW' ]
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/data'
+    networks:
+      mynetwork:
+        aliases:
+          - prometheus.com
+    volumes:
+      - './prometheus/prometheus.yml:/etc/prometheus/prometheus.yml'
+      - './prometheus/data:/data'
+
+  grafana:
+    image: 'grafana/grafana'
+    env_file: local.env
+    environment:
+      CONSUL_SERVER: consul
+      SERVICE_NAME: mongos-game
+    command: echo 'Starting Grafana'
+    ports:
+      - '3000:3000'
+    cap_add: [ 'NET_ADMIN', 'NET_RAW' ]
+    networks:
+      mynetwork:
+        aliases:
+          - grafana.com
+
+  mongo:
+    image: 'mongo:latest'
+    ports:
+      - '9000'
+    networks:
+      mynetwork:
+        aliases:
+          - mongo.com
+
+  node-exporter:
+    image: prom/node-exporter
+    ports:
+      - 9100:9100
+    restart: always
+    networks:
+      mynetwork:
+        aliases:
+          - node-exporter.com
+
+  # mongo-exporter:
+  #   image: 'mongo-exporter:latest'
+  #   ports:
+  #     - ''
+  #   env:
+  #     - MONGO_URI: 'mongo'
+  #     - MONGODB_USER: ''
+  #     - MONGODB_PASS: ''
+  #     - PORT: 9000
+  #
+
+  redis:
+    image: 'redis'
+    ports:
+      - '6379:6379'
+    networks:
+      mynetwork:
+        aliases:
+          - redis.com
+
+  upbit-exporter:
+    image: 'upbit-exporter'
+    env_file: local.env
+    ports:
+      - '3001:3001'
+    networks:
+      mynetwork:
+        aliases:
+          - upbit-exporter.com
+
+  node:
+    image: 'node:latest'
+    command: sleep 100000
+    cap_add: [ 'NET_ADMIN', 'NET_RAW' ]
+    networks:
+      mynetwork:
+        aliases:
+          - node.com
+
+networks:
+  mynetwork:
+    #driver: bridge
+    #external: true

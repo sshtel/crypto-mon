@@ -1,0 +1,32 @@
+{
+  "name": "upbit-exporter",
+  "version": "1.0.0",
+  "description": "upbit-exporter for prometheus",
+  "main": "dist/app.js",
+  "dependencies": {
+    "bluebird": "^3.7.0",
+    "express": "^4.17.1",
+    "prom-client": "^11.5.3",
+    "redis": "^2.8.0",
+    "upbit-js": "0.0.6"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.142",
+    "@types/node": "^12.7.12",
+    "@types/redis": "^2.8.14",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-jasmine": "^4.0.0",
+    "gulp-tslint": "^8.1.4",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp build",
+    "dev": "cross-env CI=true  NODE_ENV=development nodemon dist/app.js --watch server",
+    "start": "cross-env NODE_ENV=production node dist/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
