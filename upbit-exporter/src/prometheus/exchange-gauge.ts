@@ -4,30 +4,31 @@ import { RedisClient } from 'redis';
 import { UpbitProcessor } from '../processor/upbit.processor';
 import { constant } from '../util/constant';
 import { getPreRedisKey } from '../util/redis-key';
-export class PriceGauge {
-  private register;
-  private gauge;
+export class ExchangeGauge {
+  // private register;
+  private gauge: client.Gauge;
 
-  constructor() {
-    this.register = new client.Registry();
+  constructor(name: string, help: string) {
+    // this.register = new client.Registry();
     this.gauge = new client.Gauge({
-      name: 'my_metric_name',
-      help: 'my_metric_help',
+      name,
+      help,
       labelNames: ['market', 'info']
     });
-    this.register.registerMetric(this.gauge);
-
+    // this.register.registerMetric(this.gauge);
+    client.register.registerMetric(this.gauge);
   }
 
-  public setMetric(market: string, tradePrice: number) {
-    this.gauge.set({market, info: 'trade_price'}, tradePrice);
+  public setMetric(market: string, { tradePrice, volume }: { tradePrice?: number, volume?: number}) {
+    if (tradePrice) this.gauge.set({market, info: 'trade_price'}, tradePrice);
+    if (volume) this.gauge.set({market, info: 'volume'}, volume);
   }
 
   public getMetrics() {
     // client.register.clear();
     // client.register.resetMetrics();
     // client.Registry.merge(this.getSampleRegistries());
-    const lists = constant.UPBIT_KRW_MARKET_SQUADS[0];
+    const lists = constant.UPBIT_ALL_KRW_MARKET_LIST;
     const redisClient: RedisClient = UpbitProcessor.getRedis();
     for (const market of lists) {
       const key = getPreRedisKey(market);
@@ -37,6 +38,12 @@ export class PriceGauge {
           if (_.isNaN(num)) num = 0;
           this.gauge.set({market, info: 'trade_price'}, num);
         });
+        redisClient.hget(key, 'candle_acc_trade_price', (err, value) => {
+          let num = +(value || NaN);
+          if (_.isNaN(num)) num = 0;
+          this.gauge.set({market, info: 'candle_acc_trade_price'}, num);
+        });
+
       } catch (e) {
         console.error(e);
       }

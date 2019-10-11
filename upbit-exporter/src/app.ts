@@ -1,20 +1,15 @@
 import * as express from 'express';
 import { UpbitCron } from './cronjob/upbit-cron';
 import { UpbitProcessor } from './processor/upbit.processor';
-import { PriceGauge } from './prometheus/price-gauge';
 
 const app = express();
-
-const priceGauge = new PriceGauge();
-
-UpbitProcessor.getObject().setPriceGauge(priceGauge);
-
+const upbit = UpbitProcessor.getObject();
 app.get('/metrics', (req, res) => {
-  res.send(priceGauge.getMetrics());
+  res.send(upbit.getExchangeGauge().getMetrics());
 });
 
 app.get('/console', (req, res) => {
-  console.log(priceGauge.getMetrics());
+  console.log(upbit.getExchangeGauge().getMetrics());
 });
 
 async function start() {
