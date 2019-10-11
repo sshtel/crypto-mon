@@ -47,16 +47,11 @@ export class UpbitProcessor {
     console.log('constructor.......');
   }
 
-  public allJobs() {
-    return [ UpbitProcessor.getObject().updatePriceJob ];
-  }
-
   public getExchangeGauge() {
     return this.exchangeGauge;
   }
 
-  public async updatePriceJob() {
-    const lists = constant.UPBIT_ALL_KRW_MARKET_LIST;
+  public async updateCandleJob(lists: string[]) {
     // const lists = constant.UPBIT_KRW_MARKET_SQUADS[0];
     // const lists = constant.UPBIT_KRW_MARKET_BTC_ONLY;
     const unit = 1;
@@ -70,6 +65,7 @@ export class UpbitProcessor {
         const res: CandlesMinutes[] = await UpbitProcessor.getUpbit().candlesMinutes( { unit, market, count, to});
         const curr = res[0];
         const prev = res[1];
+
         const key = getPreRedisKey(market);
         if (curr) client.hset(key, 'trade_price', curr.trade_price + '');
         if (prev) client.hset(key, 'candle_acc_trade_price', prev.candle_acc_trade_price + '');
@@ -78,7 +74,14 @@ export class UpbitProcessor {
         console.error(e);
       }
     }
+  }
 
+  public async updateKrwMarketCandleJob() {
+    await UpbitProcessor.getObject().updateCandleJob(constant.UPBIT_ALL_KRW_MARKET_LIST);
+  }
+
+  public async updateBtcMarketCandleJob() {
+    await UpbitProcessor.getObject().updateCandleJob(constant.UPBIT_ALL_BTC_MARKET_LIST);
   }
 
 }

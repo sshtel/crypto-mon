@@ -15,7 +15,8 @@ app.get('/console', (req, res) => {
 async function start() {
   const port = 3001;
   const cron = new UpbitCron();
-  cron.register(UpbitProcessor.getObject().updatePriceJob);
+  cron.register(UpbitProcessor.getObject().updateKrwMarketCandleJob);
+  cron.register(UpbitProcessor.getObject().updateBtcMarketCandleJob);
   cron.run();
 
   // Listen the server

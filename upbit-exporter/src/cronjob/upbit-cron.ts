@@ -5,7 +5,7 @@ export class UpbitCron {
   private period;
 
   constructor() {
-    this.period = +(process.env.CRON_PERIOD || 5000);
+    this.period = +(process.env.CRON_PAUSE || 1000);
     console.log('period...........' + this.period);
   }
 
