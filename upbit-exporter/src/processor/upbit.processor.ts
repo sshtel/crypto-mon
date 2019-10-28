@@ -1,10 +1,9 @@
 import * as Bluebird from 'bluebird';
 import * as _ from 'lodash';
-import * as redis from 'redis';
 import { Upbit } from 'upbit-js';
 import { ExchangeGauge } from '../prometheus/exchange-gauge';
+import { TickerCache } from '../storage/ticker-cache';
 import { constant } from '../util/constant';
-import { getPreRedisKey } from '../util/redis-key';
 
 interface CandlesMinutes {
     market?: string;
@@ -32,19 +31,15 @@ export class UpbitProcessor {
   public static getUpbit(): Upbit {
     return UpbitProcessor.getObject().upbit;
   }
-  public static getRedis() {
-    return UpbitProcessor.getObject().redisClient;
+  public static getTickerCache() {
+    return UpbitProcessor.getObject().tickerCache;
   }
   private static upbitProcessor: UpbitProcessor | undefined = undefined;
   private upbit: Upbit = new Upbit();
   private exchangeGauge: ExchangeGauge = new ExchangeGauge('exchg_upbit', 'upbit exchange metric');
-  private redisClient;
-  private host = process.env.REDIS_HOST || 'localhost';
-  private port = +(process.env.REDIS_PORT || 6379);
-
+  private tickerCache: TickerCache;
   constructor() {
-    this.redisClient = redis.createClient(this.port, this.host);
-    console.log('constructor.......');
+    this.tickerCache = new TickerCache();
   }
 
   public getExchangeGauge() {
@@ -54,10 +49,11 @@ export class UpbitProcessor {
   public async updateCandleJob(lists: string[]) {
     // const lists = constant.UPBIT_KRW_MARKET_SQUADS[0];
     // const lists = constant.UPBIT_KRW_MARKET_BTC_ONLY;
+
     const unit = 1;
     const count = 2;
     const to = undefined;
-    const client: redis.RedisClient = UpbitProcessor.getRedis();
+    const tickerCache = UpbitProcessor.getTickerCache();
     const exchangeGauge = UpbitProcessor.getObject().getExchangeGauge();
     for (const market of lists) {
       await Bluebird.delay(200);
@@ -66,9 +62,10 @@ export class UpbitProcessor {
         const curr = res[0];
         const prev = res[1];
 
-        const key = getPreRedisKey(market);
-        if (curr) client.hset(key, 'trade_price', curr.trade_price + '');
-        if (prev) client.hset(key, 'candle_acc_trade_price', prev.candle_acc_trade_price + '');
+        if (curr && curr.trade_price &&
+            prev && prev.candle_acc_trade_price)
+          tickerCache.update(market, { tradePrice: curr.trade_price, accTradePrice: prev.candle_acc_trade_price });
+
         exchangeGauge.setMetric(market, { tradePrice: curr.trade_price, volume: prev.candle_acc_trade_price});
       } catch (e) {
         console.error(e);
