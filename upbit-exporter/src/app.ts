@@ -4,12 +4,12 @@ import { UpbitProcessor } from './processor/upbit.processor';
 
 const app = express();
 const upbit = UpbitProcessor.getObject();
-app.get('/metrics', (req, res) => {
-  res.send(upbit.getExchangeGauge().getMetrics());
+app.get('/metrics', async (req, res) => {
+  res.send(await upbit.getExchangeGauge().getMetrics());
 });
 
-app.get('/console', (req, res) => {
-  console.log(upbit.getExchangeGauge().getMetrics());
+app.get('/console', async (req, res) => {
+  console.log(await upbit.getExchangeGauge().getMetrics());
 });
 
 async function start() {

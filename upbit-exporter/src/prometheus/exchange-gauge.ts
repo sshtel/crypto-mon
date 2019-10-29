@@ -4,7 +4,6 @@ import { UpbitProcessor } from '../processor/upbit.processor';
 import { constant } from '../util/constant';
 export class ExchangeGauge {
   private gauge: client.Gauge;
-
   constructor(name: string, help: string) {
     this.gauge = new client.Gauge({
       name,
@@ -20,9 +19,8 @@ export class ExchangeGauge {
   }
 
   public async getMetrics() {
-    client.register.clear();
     client.register.resetMetrics();
-    // client.Registry.merge(this.getSampleRegistries());
+    console.log(client.register.metrics());
     const lists = constant.UPBIT_ALL_KRW_MARKET_LIST;
     const tickerCache = UpbitProcessor.getTickerCache();
 
@@ -35,7 +33,6 @@ export class ExchangeGauge {
         console.error(e);
       }
     }
-
     return client.register.metrics();
   }
 
