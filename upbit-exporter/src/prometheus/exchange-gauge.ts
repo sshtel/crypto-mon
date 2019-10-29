@@ -1,21 +1,15 @@
 import * as _ from 'lodash';
 import * as client from 'prom-client';
-import { RedisClient } from 'redis';
 import { UpbitProcessor } from '../processor/upbit.processor';
 import { constant } from '../util/constant';
-import { getPreRedisKey } from '../util/redis-key';
 export class ExchangeGauge {
-  // private register;
   private gauge: client.Gauge;
-
   constructor(name: string, help: string) {
-    // this.register = new client.Registry();
     this.gauge = new client.Gauge({
       name,
       help,
       labelNames: ['market', 'info']
     });
-    // this.register.registerMetric(this.gauge);
     client.register.registerMetric(this.gauge);
   }
 
@@ -24,31 +18,21 @@ export class ExchangeGauge {
     if (volume) this.gauge.set({market, info: 'volume'}, volume);
   }
 
-  public getMetrics() {
-    // client.register.clear();
-    // client.register.resetMetrics();
-    // client.Registry.merge(this.getSampleRegistries());
+  public async getMetrics() {
+    client.register.resetMetrics();
+    console.log(client.register.metrics());
     const lists = constant.UPBIT_ALL_KRW_MARKET_LIST;
-    const redisClient: RedisClient = UpbitProcessor.getRedis();
-    for (const market of lists) {
-      const key = getPreRedisKey(market);
-      try {
-        redisClient.hget(key, 'trade_price', (err, value) => {
-          let num = +(value || NaN);
-          if (_.isNaN(num)) num = 0;
-          this.gauge.set({market, info: 'trade_price'}, num);
-        });
-        redisClient.hget(key, 'candle_acc_trade_price', (err, value) => {
-          let num = +(value || NaN);
-          if (_.isNaN(num)) num = 0;
-          this.gauge.set({market, info: 'candle_acc_trade_price'}, num);
-        });
+    const tickerCache = UpbitProcessor.getTickerCache();
 
+    for (const market of lists) {
+      try {
+        const value = await tickerCache.get(market);
+        if (value && value.tradePrice) this.gauge.set({market, info: 'trade_price'}, value.tradePrice);
+        if (value && value.accTradePrice) this.gauge.set({market, info: 'candle_acc_trade_price'}, value.accTradePrice);
       } catch (e) {
         console.error(e);
       }
     }
-
     return client.register.metrics();
   }
 
