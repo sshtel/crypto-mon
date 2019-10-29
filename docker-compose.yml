@@ -10,6 +10,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/data'
+      - '--storage.tsdb.retention.time=90d'
     networks:
       mynetwork:
         aliases:
