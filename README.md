@@ -45,6 +45,11 @@ scrape_configs:
       - targets: [ 'node-exporter.com:9100' ]
 ```
 
+# Prometheus dashboard sample
+![Prometheus](https://raw.githubusercontent.com/sshtel/crypto-mon/master/documents/prometheus-sample.png)
+
+# Grafana dashboard sample
+![Grafana](https://raw.githubusercontent.com/sshtel/crypto-mon/master/documents/grafana-sample.png)
 
 
 # Tech stacks
