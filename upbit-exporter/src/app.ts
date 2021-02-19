@@ -1,9 +1,14 @@
 import * as express from 'express';
-import { UpbitCron } from './cronjob/upbit-cron';
+// import { UpbitCron } from './cronjob/upbit-cron';
 import { UpbitProcessor } from './processor/upbit.processor';
+import { WsTickerProcessor } from './processor/ws-ticker-processor';
+import { constant } from './util/constant';
 
 const app = express();
 const upbit = UpbitProcessor.getObject();
+
+const ticker = new WsTickerProcessor(constant.UPBIT_ALL_KRW_MARKET_LIST);
+ticker.test();
 app.get('/metrics', async (req, res) => {
   res.send(await upbit.getExchangeGauge().getMetrics());
 });
@@ -14,10 +19,10 @@ app.get('/console', async (req, res) => {
 
 async function start() {
   const port = 3001;
-  const cron = new UpbitCron();
-  cron.register(UpbitProcessor.getObject().updateKrwMarketCandleJob);
-  cron.register(UpbitProcessor.getObject().updateBtcMarketCandleJob);
-  cron.run();
+  // const cron = new UpbitCron();
+  // cron.register(UpbitProcessor.getObject().updateKrwMarketCandleJob);
+  // cron.register(UpbitProcessor.getObject().updateBtcMarketCandleJob);
+  // cron.run();
 
   // Listen the server
   app.listen(port, () => {
