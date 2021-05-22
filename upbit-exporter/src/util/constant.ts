@@ -1,3 +1,5 @@
+import _ = require('lodash');
+
 class Constant {
 
   public UPBIT_MAJOR_MARKET_LIST = [];
@@ -344,6 +346,25 @@ class Constant {
                                 .concat(this.UPBIT_ALL_ETH_MARKET_LIST)
                                 .concat(this.UPBIT_ALL_KRW_MARKET_LIST)
                                 .concat(this.UPBIT_ALL_USDT_MARKET_LIST);
+
+  public updateFromMarketAll(v) {
+    _.remove(this.UPBIT_ALL_KRW_MARKET_LIST);
+    _.remove(this.UPBIT_ALL_BTC_MARKET_LIST);
+    _.remove(this.UPBIT_ALL_USDT_MARKET_LIST);
+
+    v.forEach(element => {
+      const market: string = element.market;
+      switch (market.substr(0, 3)) {
+        case 'KRW': this.UPBIT_ALL_KRW_MARKET_LIST.push(market); break;
+        case 'BTC': this.UPBIT_ALL_BTC_MARKET_LIST.push(market); break;
+        case 'USTD': this.UPBIT_ALL_USDT_MARKET_LIST.push(market); break;
+      }
+    });
+
+    console.log(JSON.stringify(this.UPBIT_ALL_KRW_MARKET_LIST));
+    console.log(JSON.stringify(this.UPBIT_ALL_BTC_MARKET_LIST));
+    console.log(JSON.stringify(this.UPBIT_ALL_USDT_MARKET_LIST));
+  }
 }
 
 export const constant = new Constant;

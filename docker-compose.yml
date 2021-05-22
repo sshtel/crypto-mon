@@ -1,8 +1,8 @@
 version: '3'
 services:
   prometheus:
-    # image: 'prom/prometheus'
-    image: 'prom-test'
+    image: 'prom/prometheus'
+    # image: 'prom-test'
     env_file: local.env
     ports:
       - 9090:9090
@@ -74,7 +74,7 @@ services:
           - redis.com
 
   upbit-exporter:
-    image: 'upbit-exporter'
+    image: 'sshtel/upbit-exporter:latest'
     env_file: local.env
     ports:
       - '3001:3001'

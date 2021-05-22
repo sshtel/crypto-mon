@@ -26,6 +26,9 @@
   "scripts": {
     "test": "gulp test",
     "build": "gulp build",
+    "docker-build": "docker build -t sshtel/upbit-exporter:latest .",
+    "docker-push": "docker push sshtel/upbit-exporter:latest .",
+    "run:dev": "ts-node ./src/app.ts",
     "dev": "cross-env CI=true  NODE_ENV=development nodemon dist/app.js --watch server",
     "start": "cross-env NODE_ENV=production node dist/app.js"
   },
