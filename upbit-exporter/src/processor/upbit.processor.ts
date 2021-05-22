@@ -81,4 +81,9 @@ export class UpbitProcessor {
     await UpbitProcessor.getObject().updateCandleJob(constant.UPBIT_ALL_BTC_MARKET_LIST);
   }
 
+  public async getMarketAllFromServer() {
+    const marketList =  await this.upbit.marketAll();
+    return marketList;
+  }
+
 }
