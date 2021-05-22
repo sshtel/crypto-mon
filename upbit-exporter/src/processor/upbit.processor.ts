@@ -82,6 +82,7 @@ export class UpbitProcessor {
   }
 
   public async getMarketAllFromServer() {
+    this.upbit.updateMarketAll();
     const marketList =  await this.upbit.marketAll();
     return marketList;
   }
