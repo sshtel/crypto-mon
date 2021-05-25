@@ -351,6 +351,7 @@ class Constant {
     _.remove(this.UPBIT_ALL_KRW_MARKET_LIST);
     _.remove(this.UPBIT_ALL_BTC_MARKET_LIST);
     _.remove(this.UPBIT_ALL_USDT_MARKET_LIST);
+    _.remove(this.UPBIT_ALL_MARKET_LIST);
 
     v.forEach(element => {
       const market: string = element.market;
@@ -364,6 +365,12 @@ class Constant {
     console.log(JSON.stringify(this.UPBIT_ALL_KRW_MARKET_LIST));
     console.log(JSON.stringify(this.UPBIT_ALL_BTC_MARKET_LIST));
     console.log(JSON.stringify(this.UPBIT_ALL_USDT_MARKET_LIST));
+
+    this.UPBIT_ALL_MARKET_LIST = this.UPBIT_ALL_MARKET_LIST
+     .concat(this.UPBIT_ALL_BTC_MARKET_LIST)
+     .concat(this.UPBIT_ALL_KRW_MARKET_LIST)
+     .concat(this.UPBIT_ALL_USDT_MARKET_LIST);
+
   }
 }
 

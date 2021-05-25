@@ -20,8 +20,8 @@ export class ExchangeGauge {
 
   public async getMetrics() {
     client.register.resetMetrics();
-    console.log(client.register.metrics());
-    const lists = constant.UPBIT_ALL_KRW_MARKET_LIST;
+    // console.log(client.register.metrics());
+    const lists = constant.UPBIT_ALL_MARKET_LIST;
     const tickerCache = UpbitProcessor.getTickerCache();
 
     for (const market of lists) {

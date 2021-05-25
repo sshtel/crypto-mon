@@ -4,18 +4,23 @@ import { UpbitProcessor } from './processor/upbit.processor';
 import { WsTickerProcessor } from './processor/ws-ticker-processor';
 import { constant } from './util/constant';
 
+import * as _ from 'lodash';
+
 const app = express();
 const upbit = UpbitProcessor.getObject();
 
 upbit.getMarketAllFromServer().then(v => {
   constant.updateFromMarketAll(v);
+  console.log(constant.UPBIT_ALL_KRW_MARKET_LIST);
+  const AllMarket = constant.UPBIT_ALL_KRW_MARKET_LIST;
+  console.log(AllMarket);
+  const ticker = new WsTickerProcessor(AllMarket);
+  ticker.test();
+
 }).catch(e => {
   console.error(e);
   process.exit(1);
 });
-
-const ticker = new WsTickerProcessor(constant.UPBIT_ALL_KRW_MARKET_LIST);
-ticker.test();
 app.get('/metrics', async (req, res) => {
   res.send(await upbit.getExchangeGauge().getMetrics());
 });
