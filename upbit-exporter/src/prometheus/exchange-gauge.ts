@@ -2,13 +2,14 @@ import * as _ from 'lodash';
 import * as client from 'prom-client';
 import { UpbitProcessor } from '../processor/upbit.processor';
 import { constant } from '../util/constant';
+
 export class ExchangeGauge {
   private gauge: client.Gauge;
   constructor(name: string, help: string) {
     this.gauge = new client.Gauge({
       name,
       help,
-      labelNames: ['market', 'info']
+      labelNames: ['market', 'info', 'type']
     });
     client.register.registerMetric(this.gauge);
   }
@@ -38,7 +39,7 @@ export class ExchangeGauge {
 
     for (const market of lists) {
       try {
-        const value = await tickerCache.get(market);
+        const value = await tickerCache.getMarket(market);
         if (!value) return;
         if (value.tradePrice) this.gauge.set({market, info: 'trade_price'}, value.tradePrice);
         if (value.accTradePrice) this.gauge.set({market, info: 'candle_acc_trade_price'}, value.accTradePrice);
@@ -48,7 +49,25 @@ export class ExchangeGauge {
         console.error(e);
       }
     }
+    await this.updateKrwAllAltMetrics();
+
     return client.register.metrics();
+  }
+
+  private async updateKrwAllAltMetrics() {
+    // all alt
+    const type = constant.UPBIT_KRW_ALLALT_SPECIAL;
+    try {
+      const tickerCache = UpbitProcessor.getTickerCache();
+      const value = await tickerCache.getSpecialKrwAllAlt();
+      if (!value) return;
+      if (value.tradePrice) this.gauge.set({type, info: 'trade_price'}, value.tradePrice);
+      if (value.accTradePrice) this.gauge.set({type, info: 'candle_acc_trade_price'}, value.accTradePrice);
+      if (value.acc_ask_volume) this.gauge.set({type, info: 'acc_ask_volume'}, value.acc_ask_volume);
+      if (value.acc_bid_volume) this.gauge.set({type, info: 'acc_bid_volume'}, value.acc_bid_volume);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   // getSampleRegistries() {
