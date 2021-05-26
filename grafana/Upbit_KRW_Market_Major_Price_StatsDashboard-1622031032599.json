@@ -1,0 +1,173 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 15,
+  "links": [],
+  "panels": [
+    {
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.7",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-BTC\", info=\"trade_price\" }",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-ETH\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-XRP\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-ADA\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-BCH\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-DOGE\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-DOT\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-LINK\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-LTC\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "I"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-XLM\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "J"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit { market=\"KRW-ETC\", info=\"trade_price\" }",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "K"
+        }
+      ],
+      "title": "Major",
+      "type": "stat"
+    }
+  ],
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Upbit_KRW_Market_Major_Price_StatsDashboard",
+  "uid": "Nc4UjPqGk",
+  "version": 12
+}

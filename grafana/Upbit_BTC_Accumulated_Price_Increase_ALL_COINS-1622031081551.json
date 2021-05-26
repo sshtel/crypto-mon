@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 11,
+  "id": 14,
   "links": [],
   "panels": [
     {
@@ -26,7 +26,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -67,17 +67,41 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ETH\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ETH\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase(exchg_upbit  {market=\"BTC-XRP\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase(exchg_upbit  {market=\"BTC-ETC\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase(exchg_upbit  {market=\"BTC-DOGE\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "ETH",
+      "title": "ETH, XRP, ETC, DOGE",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -93,7 +117,7 @@
       },
       "yaxes": [
         {
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -122,7 +146,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -133,104 +157,6 @@
         "w": 24,
         "x": 0,
         "y": 7
-      },
-      "hiddenSeries": false,
-      "id": 4,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.7",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BCH\", info=\"trade_price\"}",
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "BCH",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:432",
-          "format": "none",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:433",
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 14
       },
       "hiddenSeries": false,
       "id": 23,
@@ -261,7 +187,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-LTC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-LTC\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -269,18 +195,42 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BSV\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-BSV\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase(exchg_upbit  {market=\"BTC-BCH\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase(exchg_upbit  {market=\"BTC-ADA\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase(exchg_upbit  {market=\"BTC-EOS\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "LTC, BSV,",
+      "title": "LTC, BSV, BCH, ADA, EOS",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -297,7 +247,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -327,7 +277,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -337,7 +287,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 14
       },
       "hiddenSeries": false,
       "id": 22,
@@ -368,14 +318,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ETC\", info=\"trade_price\"}",
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "A"
-        },
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-NEO\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-NEO\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -383,7 +326,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BTG\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-BTG\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -391,7 +334,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STRK\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STRK\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -402,7 +345,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "ETC, BTG, NEO, STRK 50000~70000",
+      "title": "BTG, NEO, STRK 50000~70000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -419,7 +362,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -449,7 +392,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -459,7 +402,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 10,
@@ -490,14 +433,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-REP\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-REP\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BCHA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-BCHA\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -505,7 +448,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-LINK\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-LINK\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -513,7 +456,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-DOT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-DOT\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -521,7 +464,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-WAVES\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-WAVES\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -549,7 +492,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -579,7 +522,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -589,7 +532,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 11,
@@ -620,14 +563,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-FLOW\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-FLOW\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ATOM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ATOM\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -635,7 +578,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-QTUM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-QTUM\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -643,7 +586,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-GAS\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-GAS\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -651,7 +594,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-TON\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-TON\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -679,7 +622,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -709,7 +652,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -719,7 +662,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 35
       },
       "hiddenSeries": false,
       "id": 12,
@@ -750,14 +693,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-THETA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-THETA\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-CBK\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-CBK\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -765,7 +708,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SBD\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SBD\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -773,7 +716,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-OMG\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-OMG\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -781,15 +724,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-EOS\", info=\"trade_price\"}",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "F"
-        },
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SRM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SRM\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -797,7 +732,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-AQT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-AQT\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -805,7 +740,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-LSK\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-LSK\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -816,7 +751,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "THETA, CBK, SBD, OMG, EOS, SRM, AQT, LSK / 5000~9000",
+      "title": "THETA, CBK, SBD, OMG, SRM, AQT, LSK / 5000~9000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -833,7 +768,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -863,7 +798,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -873,7 +808,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 49
+        "y": 42
       },
       "hiddenSeries": false,
       "id": 13,
@@ -904,14 +839,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-AXS\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-AXS\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-XTZ\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-XTZ\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -919,7 +854,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-KAVA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-KAVA\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -927,7 +862,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-DAWN\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-DAWN\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -935,7 +870,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STRAX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STRAX\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -943,7 +878,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MTL\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MTL\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -971,7 +906,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1001,7 +936,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1011,7 +946,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 56
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 8,
@@ -1042,22 +977,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-KNC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-KNC\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ADA\", info=\"trade_price\"}",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "B"
-        },
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MLK\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MLK\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1065,7 +992,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SXP\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SXP\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1073,7 +1000,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-KMD\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-KMD\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1081,7 +1008,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-PUNDIX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-PUNDIX\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1089,7 +1016,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STORJ\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STORJ\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1100,7 +1027,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "SXP, KNC, ADA, MLK, KMD, PUNDIX, STORJ / 1000~3000",
+      "title": "SXP, KNC, MLK, KMD, PUNDIX, STORJ / 1000~3000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1117,7 +1044,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1147,7 +1074,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1157,7 +1084,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 63
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 14,
@@ -1188,14 +1115,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ARK\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ARK\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-DMT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-DMT\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1203,7 +1130,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ICX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ICX\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1211,7 +1138,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-IOTA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-IOTA\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1219,7 +1146,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ENJ\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ENJ\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1227,7 +1154,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ONT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ONT\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1235,7 +1162,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-PCI\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-PCI\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1263,7 +1190,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1293,7 +1220,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1303,7 +1230,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 70
+        "y": 63
       },
       "hiddenSeries": false,
       "id": 9,
@@ -1334,14 +1261,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-XRP\", info=\"trade_price\"}",
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "A"
-        },
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-GRS\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-GRS\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1349,7 +1269,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ZRX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ZRX\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1357,7 +1277,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STX\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1365,7 +1285,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-GRS\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-GRS\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1373,7 +1293,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ONG\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ONG\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1381,7 +1301,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ADX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ADX\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1392,7 +1312,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "XRP, ZRX, STX, GRS, ONG, ADX, / 1000~3000",
+      "title": "ZRX, STX, GRS, ONG, ADX, / 1000~3000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1409,7 +1329,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1439,7 +1359,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1449,7 +1369,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 77
+        "y": 70
       },
       "hiddenSeries": false,
       "id": 15,
@@ -1480,14 +1400,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MANA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MANA\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BAT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-BAT\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1495,7 +1415,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STEEM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STEEM\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1503,7 +1423,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-HIVE\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-HIVE\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1511,7 +1431,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-HUNT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-HUNT\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1519,7 +1439,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-XLM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-XLM\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1527,7 +1447,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-PLA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-PLA\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1555,7 +1475,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1585,7 +1505,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1595,7 +1515,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 84
+        "y": 77
       },
       "hiddenSeries": false,
       "id": 6,
@@ -1626,14 +1546,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-DOGE\", info=\"trade_price\"}",
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "A"
-        },
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SAND\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SAND\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1641,7 +1554,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-CVC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-CVC\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1649,7 +1562,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MARO\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MARO\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1657,7 +1570,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-EMC2\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-EMC2\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1665,7 +1578,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-GLM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-GLM\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1673,7 +1586,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ELF\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ELF\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1684,7 +1597,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "DOGE, SAND, CVC, MARO, EMC2, GLM, ELF / 200~500",
+      "title": "SAND, CVC, MARO, EMC2, GLM, ELF / 200~500",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1701,7 +1614,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1731,7 +1644,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1741,7 +1654,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 91
+        "y": 84
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1772,14 +1685,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-TFUEL\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-TFUEL\", info=\"candle_acc_trade_price\"} [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-POWR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-POWR\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1787,7 +1700,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-POLY\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-POLY\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1795,7 +1708,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-HBAR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-HBAR\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1803,7 +1716,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-CHZ\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-CHZ\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1811,7 +1724,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ABDR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ABDR\", info=\"candle_acc_trade_price\"} [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1839,7 +1752,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1869,7 +1782,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -1879,7 +1792,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 98
+        "y": 91
       },
       "hiddenSeries": false,
       "id": 17,
@@ -1910,14 +1823,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SOLVE\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SOLVE\", info=\"candle_acc_trade_price\"}  [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-AERGO\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-AERGO\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1925,7 +1838,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-XEM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-XEM\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1933,7 +1846,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BORA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-BORA\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1941,7 +1854,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-FCT2\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-FCT2\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1949,7 +1862,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-WAXP\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-WAXP\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1957,7 +1870,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-DKA\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-DKA\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1965,7 +1878,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MOC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MOC\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1993,7 +1906,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2023,7 +1936,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -2033,7 +1946,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 105
+        "y": 98
       },
       "hiddenSeries": false,
       "id": 18,
@@ -2064,14 +1977,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ZIL\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ZIL\", info=\"candle_acc_trade_price\"}  [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-CRO\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-CRO\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2079,7 +1992,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ANKR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ANKR\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2087,7 +2000,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-LBC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-LBC\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2095,7 +2008,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-UPP\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-UPP\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2103,7 +2016,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-META\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-META\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2111,7 +2024,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-IGNIS\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-IGNIS\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2119,7 +2032,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-VET\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-VET\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2147,7 +2060,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2177,7 +2090,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -2187,7 +2100,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 112
+        "y": 105
       },
       "hiddenSeries": false,
       "id": 19,
@@ -2218,14 +2131,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-HUM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-HUM\", info=\"candle_acc_trade_price\"}  [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SNT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SNT\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2233,7 +2146,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-LOOM\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-LOOM\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2241,7 +2154,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-ORBS\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-ORBS\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2249,7 +2162,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SSX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SSX\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2257,7 +2170,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MED\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MED\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2265,7 +2178,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-PXL\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-PXL\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2273,7 +2186,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-TRX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-TRX\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2301,7 +2214,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2331,7 +2244,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -2341,7 +2254,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 119
+        "y": 112
       },
       "hiddenSeries": false,
       "id": 20,
@@ -2372,14 +2285,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-JST\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-JST\", info=\"candle_acc_trade_price\"}  [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-LAMB\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-LAMB\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2387,7 +2300,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STPT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STPT\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2395,7 +2308,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-QTCON\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-QTCON\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2403,7 +2316,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-EDR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-EDR\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2411,7 +2324,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-IOST\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-IOST\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2419,7 +2332,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-STMX\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-STMX\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2427,7 +2340,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-QKC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-QKC\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2455,7 +2368,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2485,7 +2398,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "none"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -2495,7 +2408,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 126
+        "y": 119
       },
       "hiddenSeries": false,
       "id": 21,
@@ -2526,14 +2439,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-SC\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-SC\", info=\"candle_acc_trade_price\"}  [5m])",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MVL\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MVL\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2541,7 +2454,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-OBSR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-OBSR\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2549,7 +2462,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-TSHP\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-TSHP\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2557,7 +2470,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-RFR\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-RFR\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2565,7 +2478,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-IQ\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-IQ\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2573,7 +2486,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-AHT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-AHT\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2581,7 +2494,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-TT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-TT\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2589,7 +2502,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MFT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MFT\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2597,7 +2510,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-MBL\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-MBL\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2605,7 +2518,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-CRE\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-CRE\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2613,7 +2526,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"BTC-BTT\", info=\"trade_price\"}",
+          "expr": "increase(exchg_upbit  {market=\"BTC-BTT\", info=\"candle_acc_trade_price\"}  [5m])",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2641,7 +2554,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "none",
+          "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2664,7 +2577,7 @@
       }
     }
   ],
-  "refresh": "30s",
+  "refresh": false,
   "schemaVersion": 27,
   "style": "dark",
   "tags": [],
@@ -2677,7 +2590,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Upbit BTC market Price All coins",
-  "uid": "PO3bcE12Qkj",
-  "version": 2
+  "title": "Upbit_BTC_Accumulated_Price_Increase_ALL_COINS",
+  "uid": "LtkK532Nv1p",
+  "version": 5
 }

@@ -15,105 +15,9 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 12,
   "links": [],
   "panels": [
-    {
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "unit": "string"
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 0
-      },
-      "hiddenSeries": false,
-      "id": 2,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.5.7",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BTC\", info=\"trade_price\"}",
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "A"
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "BTC",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "string",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
     {
       "aliasColors": {},
       "bars": false,
@@ -132,7 +36,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 0
       },
       "hiddenSeries": false,
       "id": 3,
@@ -163,7 +67,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ETH\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ETH\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
@@ -228,7 +132,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 14
+        "y": 7
       },
       "hiddenSeries": false,
       "id": 4,
@@ -259,7 +163,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BCH\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BCH\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
@@ -326,7 +230,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 14
       },
       "hiddenSeries": false,
       "id": 23,
@@ -357,7 +261,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-LTC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-LTC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -365,7 +269,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BSV\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BSV\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -433,7 +337,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 22,
@@ -464,14 +368,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ETC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ETC\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-NEO\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-NEO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -479,7 +383,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BTG\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BTG\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -487,7 +391,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STRK\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STRK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -555,7 +459,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 10,
@@ -586,14 +490,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-REP\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-REP\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BCHA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BCHA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -601,7 +505,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-LINK\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-LINK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -609,7 +513,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-DOT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-DOT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -617,7 +521,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-WAVES\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-WAVES\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -685,7 +589,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 35
       },
       "hiddenSeries": false,
       "id": 11,
@@ -716,14 +620,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-FLOW\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-FLOW\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ATOM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ATOM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -731,7 +635,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-QTUM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-QTUM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -739,7 +643,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-GAS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-GAS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -747,7 +651,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-TON\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-TON\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -815,7 +719,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 49
+        "y": 42
       },
       "hiddenSeries": false,
       "id": 12,
@@ -846,14 +750,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-THETA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-THETA\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-CBK\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-CBK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -861,7 +765,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SBD\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SBD\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -869,7 +773,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-OMG\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-OMG\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -877,7 +781,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-EOS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-EOS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -885,7 +789,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SRM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SRM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -893,7 +797,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-AQT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-AQT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -901,7 +805,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-LSK\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-LSK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -969,7 +873,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 56
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 13,
@@ -1000,14 +904,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-AXS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-AXS\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-XTZ\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-XTZ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1015,7 +919,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-KAVA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-KAVA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1023,7 +927,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-DAWN\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-DAWN\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1031,7 +935,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STRAX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STRAX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1039,7 +943,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MTL\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MTL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1107,7 +1011,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 63
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 8,
@@ -1138,14 +1042,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-KNC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-KNC\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ADA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ADA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1153,7 +1057,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MLK\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MLK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1161,7 +1065,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SXP\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SXP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1169,7 +1073,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-KMD\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-KMD\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1177,7 +1081,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-PUNDIX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-PUNDIX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1185,7 +1089,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STORJ\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STORJ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1253,7 +1157,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 70
+        "y": 63
       },
       "hiddenSeries": false,
       "id": 14,
@@ -1284,14 +1188,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ARK\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ARK\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-DMT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-DMT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1299,7 +1203,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ICX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ICX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1307,7 +1211,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-IOTA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-IOTA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1315,7 +1219,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ENJ\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ENJ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1323,7 +1227,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ONT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ONT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1331,7 +1235,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-PCI\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-PCI\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1399,7 +1303,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 77
+        "y": 70
       },
       "hiddenSeries": false,
       "id": 9,
@@ -1430,14 +1334,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-XRP\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-XRP\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-GRS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-GRS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1445,7 +1349,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ZRX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ZRX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1453,7 +1357,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1461,7 +1365,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-GRS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-GRS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1469,7 +1373,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ONG\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ONG\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1477,7 +1381,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ADX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ADX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1545,7 +1449,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 84
+        "y": 77
       },
       "hiddenSeries": false,
       "id": 15,
@@ -1576,14 +1480,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MANA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MANA\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BAT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BAT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1591,7 +1495,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STEEM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STEEM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1599,7 +1503,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-HIVE\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-HIVE\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1607,7 +1511,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-HUNT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-HUNT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1615,7 +1519,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-XLM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-XLM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1623,7 +1527,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-PLA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-PLA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1691,7 +1595,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 91
+        "y": 84
       },
       "hiddenSeries": false,
       "id": 6,
@@ -1722,14 +1626,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-DOGE\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-DOGE\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SAND\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SAND\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1737,7 +1641,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-CVC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-CVC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1745,7 +1649,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MARO\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MARO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1753,7 +1657,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-EMC2\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-EMC2\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1761,7 +1665,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-GLM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-GLM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1769,7 +1673,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ELF\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ELF\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1837,7 +1741,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 98
+        "y": 91
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1868,14 +1772,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-TFUEL\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-TFUEL\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-POWR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-POWR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1883,7 +1787,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-POLY\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-POLY\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1891,7 +1795,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-HBAR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-HBAR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1899,7 +1803,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-CHZ\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-CHZ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1907,7 +1811,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ABDR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ABDR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1975,7 +1879,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 105
+        "y": 98
       },
       "hiddenSeries": false,
       "id": 17,
@@ -2006,14 +1910,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SOLVE\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SOLVE\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-AERGO\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-AERGO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2021,7 +1925,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-XEM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-XEM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2029,7 +1933,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BORA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BORA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2037,7 +1941,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-FCT2\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-FCT2\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2045,7 +1949,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-WAXP\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-WAXP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2053,7 +1957,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-DKA\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-DKA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2061,7 +1965,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MOC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MOC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2129,7 +2033,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 112
+        "y": 105
       },
       "hiddenSeries": false,
       "id": 18,
@@ -2160,14 +2064,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ZIL\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ZIL\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-CRO\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-CRO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2175,7 +2079,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ANKR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ANKR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2183,7 +2087,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-LBC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-LBC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2191,7 +2095,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-UPP\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-UPP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2199,7 +2103,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-META\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-META\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2207,7 +2111,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-IGNIS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-IGNIS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2215,7 +2119,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-VET\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-VET\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2283,7 +2187,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 119
+        "y": 112
       },
       "hiddenSeries": false,
       "id": 19,
@@ -2314,14 +2218,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-HUM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-HUM\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SNT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SNT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2329,7 +2233,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-LOOM\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-LOOM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2337,7 +2241,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-ORBS\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-ORBS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2345,7 +2249,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SSX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SSX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2353,7 +2257,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MED\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MED\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2361,7 +2265,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-PXL\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-PXL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2369,7 +2273,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-TRX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-TRX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2437,7 +2341,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 126
+        "y": 119
       },
       "hiddenSeries": false,
       "id": 20,
@@ -2468,14 +2372,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-JST\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-JST\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-LAMB\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-LAMB\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2483,7 +2387,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STPT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STPT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2491,7 +2395,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-QTCON\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-QTCON\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2499,7 +2403,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-EDR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-EDR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2507,7 +2411,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-IOST\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-IOST\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2515,7 +2419,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-STMX\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-STMX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2523,7 +2427,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-QKC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-QKC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2591,7 +2495,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 133
+        "y": 126
       },
       "hiddenSeries": false,
       "id": 21,
@@ -2622,14 +2526,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-SC\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-SC\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MVL\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MVL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2637,7 +2541,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-OBSR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-OBSR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2645,7 +2549,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-TSHP\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-TSHP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2653,7 +2557,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-RFR\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-RFR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2661,7 +2565,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-IQ\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-IQ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2669,7 +2573,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-AHT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-AHT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2677,7 +2581,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-TT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-TT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2685,7 +2589,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MFT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MFT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2693,7 +2597,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-MBL\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-MBL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2701,7 +2605,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-CRE\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-CRE\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2709,7 +2613,7 @@
         },
         {
           "exemplar": true,
-          "expr": "exchg_upbit {market=\"KRW-BTT\", info=\"trade_price\"}",
+          "expr": "exchg_upbit {market=\"BTC-BTT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2773,7 +2677,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Upbit KRW market Price All coins",
-  "uid": "H1sbH5qGk",
-  "version": 17
+  "title": "Upbit_BTC_market_Price_ALL_COINS",
+  "uid": "PO3bcE12Qkj",
+  "version": 3
 }

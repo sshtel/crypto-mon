@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 8,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -26,7 +26,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "string"
         },
         "overrides": []
       },
@@ -67,7 +67,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BTC\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BTC\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
@@ -93,7 +93,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "string",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -122,7 +122,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -163,41 +163,17 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ETH\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ETH\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
-        },
-        {
-          "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-XRP\", info=\"candle_acc_trade_price\"} [5m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "B"
-        },
-        {
-          "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ETC\", info=\"candle_acc_trade_price\"} [5m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "C"
-        },
-        {
-          "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-DOGE\", info=\"candle_acc_trade_price\"} [5m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "D"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "ETH, XRP, ETC, DOGE",
+      "title": "ETH",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -213,7 +189,7 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -242,7 +218,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -253,6 +229,104 @@
         "w": 24,
         "x": 0,
         "y": 14
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"KRW-BCH\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "BCH",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 23,
@@ -283,7 +357,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-LTC\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-LTC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -291,42 +365,18 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BSV\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BSV\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "C"
-        },
-        {
-          "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BCH\", info=\"candle_acc_trade_price\"} [5m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "A"
-        },
-        {
-          "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ADA\", info=\"candle_acc_trade_price\"} [5m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "D"
-        },
-        {
-          "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-EOS\", info=\"candle_acc_trade_price\"} [5m])",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{market}}",
-          "refId": "E"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "LTC, BSV, BCH, ADA, EOS",
+      "title": "LTC, BSV,",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -343,7 +393,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -373,7 +423,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -383,7 +433,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 21
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 22,
@@ -414,7 +464,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-NEO\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ETC\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"KRW-NEO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -422,7 +479,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BTG\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BTG\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -430,7 +487,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STRK\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STRK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -441,7 +498,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "BTG, NEO, STRK 50000~70000",
+      "title": "ETC, BTG, NEO, STRK 50000~70000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -458,7 +515,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -488,7 +545,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -498,7 +555,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 35
       },
       "hiddenSeries": false,
       "id": 10,
@@ -529,14 +586,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-REP\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-REP\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BCHA\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BCHA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -544,7 +601,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-LINK\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-LINK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -552,7 +609,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-DOT\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-DOT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -560,7 +617,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-WAVES\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-WAVES\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -588,7 +645,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -618,7 +675,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -628,7 +685,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 42
       },
       "hiddenSeries": false,
       "id": 11,
@@ -659,14 +716,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-FLOW\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-FLOW\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ATOM\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ATOM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -674,7 +731,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-QTUM\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-QTUM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -682,7 +739,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-GAS\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-GAS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -690,7 +747,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-TON\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-TON\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -718,7 +775,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -748,7 +805,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -758,7 +815,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 12,
@@ -789,14 +846,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-THETA\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-THETA\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-CBK\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-CBK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -804,7 +861,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SBD\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-SBD\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -812,7 +869,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-OMG\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-OMG\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -820,7 +877,15 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SRM\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-EOS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"KRW-SRM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -828,7 +893,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-AQT\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-AQT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -836,7 +901,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-LSK\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-LSK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -847,7 +912,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "THETA, CBK, SBD, OMG, SRM, AQT, LSK / 5000~9000",
+      "title": "THETA, CBK, SBD, OMG, EOS, SRM, AQT, LSK / 5000~9000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -864,7 +929,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -894,7 +959,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -904,7 +969,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 49
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 13,
@@ -935,14 +1000,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-AXS\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-AXS\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-XTZ\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-XTZ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -950,7 +1015,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-KAVA\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-KAVA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -958,7 +1023,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-DAWN\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-DAWN\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -966,7 +1031,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STRAX\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STRAX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -974,7 +1039,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MTL\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MTL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1002,7 +1067,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1032,7 +1097,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1042,7 +1107,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 56
+        "y": 63
       },
       "hiddenSeries": false,
       "id": 8,
@@ -1073,14 +1138,22 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-KNC\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-KNC\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MLK\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ADA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"KRW-MLK\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1088,7 +1161,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SXP\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-SXP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1096,7 +1169,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-KMD\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-KMD\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1104,7 +1177,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-PUNDIX\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-PUNDIX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1112,7 +1185,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STORJ\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STORJ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1123,7 +1196,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "SXP, KNC, MLK, KMD, PUNDIX, STORJ / 1000~3000",
+      "title": "SXP, KNC, ADA, MLK, KMD, PUNDIX, STORJ / 1000~3000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1140,7 +1213,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1170,7 +1243,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1180,7 +1253,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 63
+        "y": 70
       },
       "hiddenSeries": false,
       "id": 14,
@@ -1211,14 +1284,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ARK\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ARK\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-DMT\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-DMT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1226,7 +1299,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ICX\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ICX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1234,7 +1307,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-IOTA\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-IOTA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1242,7 +1315,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ENJ\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ENJ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1250,7 +1323,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ONT\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ONT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1258,7 +1331,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-PCI\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-PCI\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1286,7 +1359,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1316,7 +1389,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1326,7 +1399,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 70
+        "y": 77
       },
       "hiddenSeries": false,
       "id": 9,
@@ -1357,7 +1430,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-GRS\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-XRP\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"KRW-GRS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1365,7 +1445,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ZRX\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ZRX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1373,7 +1453,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STX\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1381,7 +1461,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-GRS\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-GRS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1389,7 +1469,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ONG\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ONG\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1397,7 +1477,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ADX\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ADX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1408,7 +1488,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "ZRX, STX, GRS, ONG, ADX, / 1000~3000",
+      "title": "XRP, ZRX, STX, GRS, ONG, ADX, / 1000~3000",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1425,7 +1505,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1455,7 +1535,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1465,7 +1545,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 77
+        "y": 84
       },
       "hiddenSeries": false,
       "id": 15,
@@ -1496,14 +1576,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MANA\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MANA\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BAT\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BAT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1511,7 +1591,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STEEM\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STEEM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1519,7 +1599,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-HIVE\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-HIVE\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1527,7 +1607,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-HUNT\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-HUNT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1535,7 +1615,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-XLM\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-XLM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1543,7 +1623,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-PLA\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-PLA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1571,7 +1651,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1601,7 +1681,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1611,7 +1691,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 84
+        "y": 91
       },
       "hiddenSeries": false,
       "id": 6,
@@ -1642,7 +1722,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SAND\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-DOGE\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"KRW-SAND\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1650,7 +1737,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-CVC\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-CVC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1658,7 +1745,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MARO\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MARO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1666,7 +1753,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-EMC2\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-EMC2\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1674,7 +1761,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-GLM\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-GLM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1682,7 +1769,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ELF\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ELF\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1693,7 +1780,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "SAND, CVC, MARO, EMC2, GLM, ELF / 200~500",
+      "title": "DOGE, SAND, CVC, MARO, EMC2, GLM, ELF / 200~500",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1710,7 +1797,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1740,7 +1827,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1750,7 +1837,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 91
+        "y": 98
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1781,14 +1868,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-TFUEL\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-TFUEL\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-POWR\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-POWR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1796,7 +1883,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-POLY\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-POLY\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1804,7 +1891,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-HBAR\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-HBAR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1812,7 +1899,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-CHZ\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-CHZ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1820,7 +1907,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ABDR\", info=\"candle_acc_trade_price\"} [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ABDR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1848,7 +1935,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -1878,7 +1965,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -1888,7 +1975,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 98
+        "y": 105
       },
       "hiddenSeries": false,
       "id": 17,
@@ -1919,14 +2006,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SOLVE\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-SOLVE\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-AERGO\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-AERGO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1934,7 +2021,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-XEM\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-XEM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1942,7 +2029,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BORA\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BORA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1950,7 +2037,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-FCT2\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-FCT2\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1958,7 +2045,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-WAXP\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-WAXP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1966,7 +2053,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-DKA\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-DKA\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -1974,7 +2061,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MOC\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MOC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2002,7 +2089,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2032,7 +2119,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -2042,7 +2129,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 105
+        "y": 112
       },
       "hiddenSeries": false,
       "id": 18,
@@ -2073,14 +2160,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ZIL\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ZIL\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-CRO\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-CRO\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2088,7 +2175,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ANKR\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ANKR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2096,7 +2183,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-LBC\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-LBC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2104,7 +2191,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-UPP\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-UPP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2112,7 +2199,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-META\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-META\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2120,7 +2207,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-IGNIS\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-IGNIS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2128,7 +2215,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-VET\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-VET\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2156,7 +2243,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2186,7 +2273,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -2196,7 +2283,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 112
+        "y": 119
       },
       "hiddenSeries": false,
       "id": 19,
@@ -2227,14 +2314,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-HUM\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-HUM\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SNT\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-SNT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2242,7 +2329,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-LOOM\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-LOOM\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2250,7 +2337,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-ORBS\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-ORBS\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2258,7 +2345,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SSX\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-SSX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2266,7 +2353,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MED\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MED\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2274,7 +2361,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-PXL\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-PXL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2282,7 +2369,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-TRX\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-TRX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2310,7 +2397,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2340,7 +2427,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -2350,7 +2437,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 119
+        "y": 126
       },
       "hiddenSeries": false,
       "id": 20,
@@ -2381,14 +2468,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-JST\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-JST\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-LAMB\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-LAMB\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2396,7 +2483,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STPT\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STPT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2404,7 +2491,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-QTCON\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-QTCON\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2412,7 +2499,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-EDR\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-EDR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2420,7 +2507,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-IOST\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-IOST\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2428,7 +2515,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-STMX\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-STMX\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2436,7 +2523,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-QKC\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-QKC\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2464,7 +2551,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2494,7 +2581,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -2504,7 +2591,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 126
+        "y": 133
       },
       "hiddenSeries": false,
       "id": 21,
@@ -2535,14 +2622,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-SC\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-SC\", info=\"trade_price\"}",
           "interval": "",
           "legendFormat": "{{market}}",
           "refId": "A"
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MVL\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MVL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2550,7 +2637,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-OBSR\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-OBSR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2558,7 +2645,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-TSHP\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-TSHP\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2566,7 +2653,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-RFR\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-RFR\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2574,7 +2661,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-IQ\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-IQ\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2582,7 +2669,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-AHT\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-AHT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2590,7 +2677,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-TT\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-TT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2598,7 +2685,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MFT\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MFT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2606,7 +2693,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-MBL\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-MBL\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2614,7 +2701,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-CRE\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-CRE\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2622,7 +2709,7 @@
         },
         {
           "exemplar": true,
-          "expr": "increase(exchg_upbit  {market=\"KRW-BTT\", info=\"candle_acc_trade_price\"}  [5m])",
+          "expr": "exchg_upbit {market=\"KRW-BTT\", info=\"trade_price\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{market}}",
@@ -2650,7 +2737,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:432",
-          "format": "short",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -2673,7 +2760,7 @@
       }
     }
   ],
-  "refresh": false,
+  "refresh": "30s",
   "schemaVersion": 27,
   "style": "dark",
   "tags": [],
@@ -2686,7 +2773,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Upbit KRW Accumulated Volume Increase for All coins",
-  "uid": "E153W1hws",
-  "version": 13
+  "title": "Upbit_KRW_market_Price_ALL_COINS",
+  "uid": "H1sbH5qGk",
+  "version": 18
 }

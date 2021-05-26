@@ -1,0 +1,784 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-BTC\", info=\"candle_acc_trade_price\"} [5m])",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ETH\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-XRP\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-BCH\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ADA\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-DOGE\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ADA\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-EOS\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "메이저 거래량 BTC/ETH/XRP/BCH/ADA/DOGE/EOS",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      },
+      "hiddenSeries": false,
+      "id": 3,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-XLM\", info=\"candle_acc_trade_price\"} [5m])",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-DOT\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-LTC\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-LINK\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-NEO\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-QTUM\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ETC\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "시총 상위권 거래량 XML/DOT/LTC/LINK/NEO/QTUM/ETC",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 16
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-XTZ\", info=\"candle_acc_trade_price\"} [5m])",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-OMG\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ZIL\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-LAMB\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-IOST\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-REP\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ZIL\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-KAVA\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-BCHA\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "I"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ZRX\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "J"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "잡트 거래량 1",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "hiddenSeries": false,
+      "id": 5,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-UPP\", info=\"candle_acc_trade_price\"} [5m])",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-EDR\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-MOC\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-CRE\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-LBC\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-SRM\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-DAWN\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "잡트 거래량 2",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-DMT\", info=\"candle_acc_trade_price\"} [5m])",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-HUNT\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ONG\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-MANA\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-ONT\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-STORJ\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "increase( exchg_upbit { job=\"upbit-exporter\", market=\"KRW-GAS\", info=\"candle_acc_trade_price\"} [5m])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "잡트 거래량 3",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Upbit_Accumulated_Price_Increase_Interesting_COINS",
+  "uid": "COXCMc3Mk",
+  "version": 17
+}
