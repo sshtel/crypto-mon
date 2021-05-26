@@ -18,6 +18,8 @@ export class TickerCache {
     const key = getPreRedisKey(market);
     this.client.hset(key, 'trade_price', value.tradePrice + '');
     this.client.hset(key, 'candle_acc_trade_price', value.accTradePrice + '');
+    this.client.hset(key, 'acc_ask_volume', value.acc_ask_volume + '');
+    this.client.hset(key, 'acc_bid_volume', value.acc_bid_volume + '');
     this.client.expire(key, TIME.TEN_MINUTE_MS);
   }
 
@@ -26,11 +28,18 @@ export class TickerCache {
     try {
       let tradePrice: number | undefined = +(await this.client.hgetAsync(key, 'trade_price'));
       let accTradePrice: number | undefined = +(await this.client.hgetAsync(key, 'candle_acc_trade_price'));
+      let acc_ask_volume: number | undefined = +(await this.client.hgetAsync(key, 'acc_ask_volume'));
+      let acc_bid_volume: number | undefined = +(await this.client.hgetAsync(key, 'acc_bid_volume'));
       if (_.isNaN(tradePrice)) tradePrice = undefined;
       if (_.isNaN(accTradePrice)) accTradePrice = undefined;
+      if (_.isNaN(acc_ask_volume)) acc_ask_volume = undefined;
+      if (_.isNaN(acc_bid_volume)) acc_bid_volume = undefined;
+
       return {
         tradePrice,
-        accTradePrice
+        accTradePrice,
+        acc_ask_volume,
+        acc_bid_volume
       };
     } catch (e) {
       console.error(e);
