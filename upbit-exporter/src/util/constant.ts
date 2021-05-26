@@ -2,10 +2,7 @@ import _ = require('lodash');
 
 class Constant {
 
-  public UPBIT_MAJOR_MARKET_LIST = [];
-  public UPBIT_MINOR_MARKET_LIST = [
-
-  ];
+  public UPBIT_KRW_ALLALT_SPECIAL = 'KRW-ALLALT-SPECIAL';
 
   /* tslint:disable */
   public UPBIT_KRW_MARKET_SQUADS = [

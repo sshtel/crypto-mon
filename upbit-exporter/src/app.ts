@@ -1,5 +1,5 @@
 import * as express from 'express';
-// import { UpbitCron } from './cronjob/upbit-cron';
+import { UpbitCron } from './cronjob/upbit-cron';
 import { UpbitProcessor } from './processor/upbit.processor';
 import { WsTickerProcessor } from './processor/ws-ticker-processor';
 import { constant } from './util/constant';
@@ -36,5 +36,11 @@ async function start() {
     console.log(`Server listening on port ${port}!`);
   });
 
+  const cron = new UpbitCron();
+  cron.register(() => {
+    const tickerCache = UpbitProcessor.getTickerCache();
+    tickerCache.updateAllKrwAltcoinData();
+  });
+  cron.run();
 }
 start();
