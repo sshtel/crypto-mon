@@ -1,0 +1,2683 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 11,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 3,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ETH\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "ETH",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BCH\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "BCH",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "hiddenSeries": false,
+      "id": 23,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-LTC\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BSV\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "LTC, BSV,",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 21
+      },
+      "hiddenSeries": false,
+      "id": 22,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ETC\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-NEO\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BTG\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STRK\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "ETC, BTG, NEO, STRK 50000~70000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 10,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-REP\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BCHA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-LINK\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-DOT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-WAVES\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "REP, BCHA, LINK, DOT, WAVES / 20000~30000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "hiddenSeries": false,
+      "id": 11,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-FLOW\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ATOM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-QTUM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-GAS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-TON\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "FLOW, ATOM, QTUM, GAS, TON / 10000~20000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 42
+      },
+      "hiddenSeries": false,
+      "id": 12,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-THETA\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-CBK\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SBD\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-OMG\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-EOS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SRM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-AQT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-LSK\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "THETA, CBK, SBD, OMG, EOS, SRM, AQT, LSK / 5000~9000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 49
+      },
+      "hiddenSeries": false,
+      "id": 13,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-AXS\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-XTZ\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-KAVA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-DAWN\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STRAX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MTL\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "AXS, XTZ, KAVA, DAWN, STRAX, MTL / 3000 ~5000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 56
+      },
+      "hiddenSeries": false,
+      "id": 8,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-KNC\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ADA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MLK\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SXP\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-KMD\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-PUNDIX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STORJ\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "SXP, KNC, ADA, MLK, KMD, PUNDIX, STORJ / 1000~3000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 63
+      },
+      "hiddenSeries": false,
+      "id": 14,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ARK\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-DMT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ICX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-IOTA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ENJ\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ONT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-PCI\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "ARK, DMT, ICX, IOTA, ENJ, ONT, PCI / 1000~3000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 70
+      },
+      "hiddenSeries": false,
+      "id": 9,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-XRP\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-GRS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ZRX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-GRS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ONG\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ADX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "XRP, ZRX, STX, GRS, ONG, ADX, / 1000~3000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 77
+      },
+      "hiddenSeries": false,
+      "id": 15,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MANA\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BAT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STEEM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-HIVE\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-HUNT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-XLM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-PLA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "MANA, BAT, STEEM, HIVE, HUNT, XLM, PLA / 400~1000",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 84
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-DOGE\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SAND\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-CVC\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MARO\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-EMC2\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-GLM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ELF\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "DOGE, SAND, CVC, MARO, EMC2, GLM, ELF / 200~500",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 91
+      },
+      "hiddenSeries": false,
+      "id": 16,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-TFUEL\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-POWR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-POLY\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-HBAR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-CHZ\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ABDR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "TFUEL, POWR, POLY, HBAR, CHZ, ABDR / 200 ~ 500",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 98
+      },
+      "hiddenSeries": false,
+      "id": 17,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SOLVE\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-AERGO\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-XEM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BORA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-FCT2\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-WAXP\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-DKA\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MOC\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "SOLVE, AERGO, XEM, BORA, FCT2, WAXP, DKA, MOC / 100~300",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 105
+      },
+      "hiddenSeries": false,
+      "id": 18,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ZIL\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-CRO\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ANKR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-LBC\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-UPP\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-META\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-IGNIS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-VET\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "ZIL, CRO, ANKR, LBC, UPP, META, IGNIS, VET / 100~300",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 112
+      },
+      "hiddenSeries": false,
+      "id": 19,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-HUM\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SNT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-LOOM\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-ORBS\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SSX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MED\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-PXL\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-TRX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "HUM, SNT, LOOM, ORBS, SSX, MED, PXL, TRX / 50~150",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 119
+      },
+      "hiddenSeries": false,
+      "id": 20,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-JST\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-LAMB\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STPT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-QTCON\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-EDR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-IOST\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-STMX\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-QKC\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "JST, LAMB, STPT, QTCON, EDR, IOST, STMX, QKC, / ~100",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 126
+      },
+      "hiddenSeries": false,
+      "id": 21,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-SC\", info=\"trade_price\"}",
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MVL\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "B"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-OBSR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "C"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-TSHP\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "D"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-RFR\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "E"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-IQ\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "F"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-AHT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "G"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-TT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "H"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MFT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "I"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-MBL\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "J"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-CRE\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "K"
+        },
+        {
+          "exemplar": true,
+          "expr": "exchg_upbit {market=\"BTC-BTT\", info=\"trade_price\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "{{market}}",
+          "refId": "L"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "SC, MVL, OBSR, TSHP, RFR, IQ, AHT, TT, MFT, MBL / ~100",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:432",
+          "format": "none",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:433",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Upbit BTC market Price All coins",
+  "uid": "PO3bcE12Qkj",
+  "version": 2
+}
