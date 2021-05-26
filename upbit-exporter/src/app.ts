@@ -11,8 +11,7 @@ const upbit = UpbitProcessor.getObject();
 
 upbit.getMarketAllFromServer().then(v => {
   constant.updateFromMarketAll(v);
-  console.log(constant.UPBIT_ALL_KRW_MARKET_LIST);
-  const AllMarket = constant.UPBIT_ALL_KRW_MARKET_LIST;
+  const AllMarket = constant.UPBIT_ALL_MARKET_LIST;
   console.log(AllMarket);
   const ticker = new WsTickerProcessor(AllMarket);
   ticker.test();
