@@ -13,9 +13,21 @@ export class ExchangeGauge {
     client.register.registerMetric(this.gauge);
   }
 
-  public setMetric(market: string, { tradePrice, volume }: { tradePrice?: number, volume?: number}) {
+  public setMetric(
+    market: string,
+    { tradePrice,
+      acc_trade_price,
+      acc_ask_volume,
+      acc_bid_volume }:
+       { tradePrice?: number,
+         acc_trade_price?: number,
+         acc_ask_volume?: number,
+         acc_bid_volume?: number
+        }) {
     if (tradePrice) this.gauge.set({market, info: 'trade_price'}, tradePrice);
-    if (volume) this.gauge.set({market, info: 'volume'}, volume);
+    if (acc_trade_price) this.gauge.set({market, info: 'acc_trade_price'}, acc_trade_price);
+    if (acc_ask_volume) this.gauge.set({market, info: 'acc_ask_volume'}, acc_ask_volume);
+    if (acc_bid_volume) this.gauge.set({market, info: 'acc_bid_volume'}, acc_bid_volume);
   }
 
   public async getMetrics() {
@@ -27,8 +39,11 @@ export class ExchangeGauge {
     for (const market of lists) {
       try {
         const value = await tickerCache.get(market);
-        if (value && value.tradePrice) this.gauge.set({market, info: 'trade_price'}, value.tradePrice);
-        if (value && value.accTradePrice) this.gauge.set({market, info: 'candle_acc_trade_price'}, value.accTradePrice);
+        if (!value) return;
+        if (value.tradePrice) this.gauge.set({market, info: 'trade_price'}, value.tradePrice);
+        if (value.accTradePrice) this.gauge.set({market, info: 'candle_acc_trade_price'}, value.accTradePrice);
+        if (value.acc_ask_volume) this.gauge.set({market, info: 'acc_ask_volume'}, value.acc_ask_volume);
+        if (value.acc_bid_volume) this.gauge.set({market, info: 'acc_bid_volume'}, value.acc_bid_volume);
       } catch (e) {
         console.error(e);
       }
